@@ -5,9 +5,9 @@ LABEL maintainer="veenayadav860@gmail.com"
 RUN apt-get update && apt-get install -y apache2 zip unzip
 
 # Download and extract the ZIP file
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/healet.zip /var/www/html/
+ADD https://www.tooplate.com/zip-templates/2113_earth.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip -q healet.zip
+RUN unzip -q 2113_earth.zip
 
 # Move files and clean up
 RUN cp -rvf photogenic/* .
