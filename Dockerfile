@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER veenayadav860@gmail.com
-RUN apt install apache2 -y
-RUN apt install zip -y
-RUN apt install unzip -y
+RUN sudo apt install apache2 -y
+RUN sudo apt install zip -y
+RUN sudo apt install unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/healet.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN sh -c 'unzip -q "*.zip"'
