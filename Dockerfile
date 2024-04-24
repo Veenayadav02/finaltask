@@ -10,8 +10,8 @@ WORKDIR /var/www/html/
 RUN unzip -q 2113_earth.zip
 
 # Move files and clean up
-RUN cp -rvf photogenic/* .
-RUN rm -rf photogenic healet.zip
+RUN cp -rvf 2113_earth/* .
+RUN rm -rf 2113_earth.zip
 
 # Start Apache service
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
