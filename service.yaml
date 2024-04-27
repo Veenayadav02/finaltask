@@ -12,3 +12,4 @@ spec:
   selector:
     app: my-app               
   type: LoadBalancer
+#vww
