@@ -1,20 +1,14 @@
-kind: Deployment
-apiVersion: apps/v1
+kind: Service                             
+apiVersion: v1
 metadata:
-   name: veena
+  name: veena
+  labels:
+    app: veena
 spec:
-   replicas: 2
-   selector:      # tells the controller which pods to watch/belong to
-    matchLabels:
-     app: veena
-   template:
-      metadata:
-        labels:
-          app: veena
-      spec:
-       containers:
-        - name: veena
-          image: star02/pocreponewpoc-project
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 80
+  ports:
+    - port: 8080                               
+      targetPort: 80                    
+      nodePort: 31200
+  selector:
+    app: veena                 
+  type: LoadBalancer
