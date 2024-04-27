@@ -6,14 +6,14 @@ spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: 1st_app
+     app: my-app
    template:
       metadata:
         labels:
-          app: 1st_app
+          app: my-app
       spec:
        containers:
-        - name: 1st_app
+        - name: my-app
           image: star02/pocreponewpoc-project
           imagePullPolicy: Always
           ports:
