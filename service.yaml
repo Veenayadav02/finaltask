@@ -1,14 +1,14 @@
 kind: Service                             
 apiVersion: v1
 metadata:
-  name: veena
+  name: myfirstdepployment
   labels:
-    app: veena
+    app: 1st_app
 spec:
   ports:
     - port: 8080                               
       targetPort: 80                    
       nodePort: 31200
   selector:
-    app: veena                 
+    app: 1st_app               
   type: LoadBalancer

@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: veena
+   name: myfirstdeployment
 spec:
    replicas: 2
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     app: veena
+     app: 1st_app
    template:
       metadata:
         labels:
-          app: veena
+          app: 1st_app
       spec:
        containers:
-        - name: veena
+        - name: 1st_app
           image: star02/pocreponewpoc-project
           imagePullPolicy: Always
           ports:
